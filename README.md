@@ -1,14 +1,12 @@
 # Sparkify 
----
+
 **Song Play Analysis**
 ## Introduction
----
 This database was designed to **Sparkify** for analytics purposes. The schema was designed to optimize queries on song play analysis through the following collected data:
 * Songs data (JSON metadata);
 * User activity (JSON logs).
 
 ## Data Schema
----
 A star schema was defined with the following structure:
 
 **Fact tables:**  
@@ -24,7 +22,6 @@ The fact table **songplays** aggregate data from the different dimensinal tables
 Although the dimensional table have all the data required for the analysis, the fact table will provide the metric of the business process in a fastest way, in this case, **songs played by users analysis**.
 
 ## ETL
----
 An ETL pipeline was build to properly ingest this data into the database, with the following data cleaning steps:
 1. DROP existing tables
 2. CREATE new tables.
@@ -32,8 +29,6 @@ An ETL pipeline was build to properly ingest this data into the database, with t
 4. Insert data from dimensional tables into the fact table **songplays**.
 
 ## Files in repository:
----
-
 * `create_tables.py`: Script to create and drop all tables.
 
 * `sql_queries.py`: Script that contains all sql queries needed in the project.
@@ -47,6 +42,5 @@ An ETL pipeline was build to properly ingest this data into the database, with t
 
 
 ## Usage 
----
 1. Run `create_tables.py`: This will create a new database called *sparkifydb* with empty tables.
 2. Run `etl.py`: This will extract data from raw sources, transform it and load it into different *sparkifydb* tables.
